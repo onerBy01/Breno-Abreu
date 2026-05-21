@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PWEB1 – Cap. 05 – AT01 – Formulário de Contato Simples</title>
+</head>
+<body>
+
+    <header>
+        <h1>Formulário de Contato Simples</h1>
+
+        <p>
+            <a href="index.html">
+                Voltar para as atividades
+            </a>
+        </p>
+    </header>
+
+    <main>
+
+        <form action="https://httpbin.org/get" method="get">
+
+            <p>
+                <label for="nome">Nome completo:</label><br />
+                <input type="text" id="nome" name="nome" />
+            </p>
+
+            <p>
+                <label for="email">Endereço de e-mail:</label><br />
+                <input type="email" id="email" name="email" />
+            </p>
+
+            <p>
+                <label for="assunto">Assunto:</label><br />
+                <input type="text" id="assunto" name="assunto" />
+            </p>
+
+            <p>
+                <label for="mensagem">Mensagem:</label><br />
+                <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+            </p>
+
+            <p>
+                <button type="submit">
+                    Enviar mensagem
+                </button>
+            </p>
+
+        </form>
+
+    </main>
+
+</body>
+</html>

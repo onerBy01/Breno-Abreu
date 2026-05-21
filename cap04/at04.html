@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recursos Multimídia - Cap. 4 / Ativ. 4</title>
+</head>
+
+<body>
+
+    <main>
+
+        <header>
+            <h1>Recursos Multimídia</h1>
+        </header>
+
+        <section>
+            <figure>
+
+                <video controls width="800" height="450" poster="poster-aula.jpg" preload="metadata">
+                    <source src="video-aula.mp4" type="video/mp4">
+                    <source src="video-aula.webm" type="video/webm">
+                    
+                    <track kind="subtitles" srclang="pt" label="Português" src="legendas/aula-html.vtt" default>
+                    
+                    <p>Seu navegador não suporta a reprodução deste vídeo. Você pode fazer o <a href="video-aula.mp4">download do vídeo</a> para assistir localmente.</p>
+
+                </video>
+
+                <figcaption>Vídeo explicativo sobre a introdução ao desenvolvimento Web, extraído do módulo de HTML5.</figcaption>
+
+            </figure>
+        </section>
+
+        <hr>
+
+        <section>
+            <figure>
+
+                <audio controls preload="metadata">
+                    <source src="podcast-episodio1.mp3" type="audio/mpeg">
+                    <source src="podcast-episodio1.ogg" type="audio/ogg">
+                    
+                    <p>Seu navegador não suporta a reprodução deste áudio. Faça o <a href="podcast-episodio1.mp3">download do arquivo de áudio</a> para ouvir.</p>
+
+                </audio>
+
+                <figcaption>Episódio 1: Melhores práticas de semântica e acessibilidade na Web. Acesse também a <a href="transcrição.html">transcrição textual deste episódio</a>.</figcaption>
+
+            </figure>
+        </section>
+
+        <hr>
+
+        <section>
+            <figure>
+
+                <iframe 
+                    width="800" 
+                    height="450" 
+                    src="https://www.youtube-nocookie.com/embed/pKOp7pQQzNM" 
+                    title="Tutorial passo a passo sobre estruturas semânticas no HTML5" 
+                    loading="lazy" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+                <figcaption>Vídeo educativo sobre a importância e o uso de tags semânticas no desenvolvimento web, publicado pelo canal Progamando Soluções  na plataforma YouTube.</figcaption>
+            </figure>
+        </section>
+
+        <hr>
+
+        <section>
+            <figure>
+                <picture>
+                    <source media="(min-width: 768px)" srcset="img/banner-wide.jpg">
+                    
+                    <img src="img/banner-mobile.jpg" alt="Ilustração conceitual mostrando diferentes dispositivos conectados acessando uma plataforma de ensino digital" width="400" height="300">
+                </picture>
+                <figcaption>Banner ilustrativo representando a diversidade e inclusão no ambiente virtual de aprendizagem.</figcaption>
+            </figure>
+        </section>
+
+        <footer>
+            <p>Nome: <strong>Breno Abreu Cavalcante</strong></p>
+            <p>Matrícula: <strong>2026307276</strong></p>
+            <p>Data: <strong>18 de Maio de 2026</strong></p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
