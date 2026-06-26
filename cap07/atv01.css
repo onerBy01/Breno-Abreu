@@ -1,0 +1,231 @@
+/* =====================================================================
+   atv01.css  —  ARQUIVO DE TRABALHO DA ATIVIDADE
+   ---------------------------------------------------------------------
+   Este CSS é funcional, porém deliberadamente básico:
+     - usa apenas seletores de tipo, de classe e de id;
+     - expressa TODAS as medidas em pixels (px);
+     - contém repetição de regras.
+   Sua tarefa é refatorá-lo conforme o enunciado, sem alterar o HTML.
+   ===================================================================== */
+
+/* O rem se baseia no font-size do elemento raiz HTML, quando o usuário da zoom, o rem segue o tamanho da fonte da página, ele é preferível para font-size e espaçamentos globais (margens, paddings entre seções). O em se baseia no font-size do elemento pai, ele segue o tamanho da fonte do própiro elemento e é preferível para valores que devem escalar proporcionalmente ao tamanho de fonte local, como o padding interno de botões. Já o % depende do elemento pai, ele segue o tamanho do elemento pai e é preferível para valores que se adaptem ao tamanho do elemento pai, como larguras e layouts responsivos.*/
+   
+/* ---------- Base ---------- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: #333333;
+  background-color: #f5f5f5;
+}
+
+/* ---------- Cabeçalho ---------- */
+.cabecalho {
+  background-color: #1565c0;
+  padding: 2rem;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.subtitulo {
+  color: #bbdefb;
+  font-size: 1rem;
+}
+
+/* ---------- Menu de navegação ---------- */
+
+/*O seletor descendente seleciona qualquer elemento que esteja dentro do elemento pai. Já o seletor filho seleciona apenas os elementos filhos do elemento pai.*/
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 1.5rem; 
+}
+
+.menu a::before {
+  content: "› ";
+  margin-right: 0.25rem;
+}
+
+.menu a {
+  color: #ffffff;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+  color: #bbdefb;
+}
+
+/* ---------- Seções ---------- */
+.secao {
+  padding: 2rem;
+  max-width: 60rem;
+  width: 100%;
+}
+
+h1, h2, h3 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  color: #1565c0;
+  font-size: 1.5rem;
+}
+h2 + p {
+  margin-top: 1rem;
+}
+
+h3 {
+  color: #0d47a1;
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.destaque ~ p {
+  color: #555555;
+  font-style: italic;
+}
+.destaque {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #b71c1c;
+}
+
+/* ---------- Grade de trilhas ---------- */
+
+/*O nth permite estilizar elementos sem adicionar classes porque é possível escolher qual elemento será estilizado com base na posição dele.*/
+
+.cartao:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.cartao:nth-child(even) {
+  background-color: #ffffff;
+}
+.cartao:nth-child(odd) {
+  background-color: #d96923;
+}
+
+.cartao {
+  display: inline-block;
+  width: 100%;
+  max-width: 280px;
+  vertical-align: top;
+  border: 1px solid #cccccc;
+  padding: 1em; 
+  margin: 0.5rem;
+  box-sizing: border-box;
+}
+
+.botao {
+  display: inline-block;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.5em 1em; 
+  margin-top: 0.5rem;
+}
+
+.cartao .botao {
+  background-color: #1565c0;
+}
+
+/*A regra aplicada será a do seletor composto, porque ele é mais específico do que apenas a classe.*/
+
+.botao:hover, .botao:focus {
+  background-color: #0d47a1;
+  outline: none;
+}
+
+/* ---------- Lista de programação ---------- */
+.lista-dias {
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+.lista-dias > li {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.lista-dias > li:first-child {
+  color: #1565c0;
+}
+.lista-dias > li:last-child {
+  color: #2e7d32;
+}
+
+/* ---------- Formulário ---------- */
+.formulario {
+  width: 100%;
+  max-width: 480px;
+}
+
+label::after {
+  content: " *";
+  color: #b71c1c;
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #999999;
+  box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+  border-color: #1565c0;
+  outline: 2px solid #bbdefb;
+}
+
+input[type="email"] {
+  border: 2px solid #1565c0;
+}
+input[type="password"] {
+  border: 2px solid #455a64;
+}
+
+button {
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #1565c0;
+  padding: 0.5em 1.5em;
+  margin-top: 1rem;
+  border: 0;
+}
+
+button:hover {
+  background-color: #0d47a1;
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  background-color: #263238;
+  color: #cfd8dc;
+  padding: 1.5rem;
+  font-size: 0.875rem;
+}
