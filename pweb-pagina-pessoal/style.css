@@ -1,5 +1,5 @@
 body {
- font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background:
    linear-gradient(rgba(191, 13, 164, 0.189),rgba(180, 10, 155, 0.463)), url("temaroxo.jpg");
     background-size: cover;
@@ -56,17 +56,13 @@ img {
     height: 400px;
     border-radius: 10%;
 }
-.separar {
+.separar .separar2{
     margin-top: 70;
     margin-bottom: 0;
 }
-.s1 {
-    margin-top: 5px;
-}
-.separar2 {
-    margin-top: 70;
-    margin-bottom: 0;
-}
-.s2 {
+.s1 .s2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
     margin-top: 5px;
 }
