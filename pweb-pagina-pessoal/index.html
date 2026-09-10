@@ -1,93 +1,106 @@
-<html>
+<!DOCTYPE html>
+<!-- ============================================================
+     TEMPLATE — Página pessoal com CSS Grid
+     Programação Web / Introdução às Tecnologias Web — IFAL
+     COMO USAR:
+     1) Copie ESTE index.html para o seu repositório (não mude a estrutura).
+     2) Escolha UM dos 3 temas de CSS (tema-1-indigo.css, tema-2-escuro.css
+        ou tema-3-editorial.css) e salve-o no seu projeto como estilo.css
+        (é o nome que este HTML carrega logo abaixo).
+     3) Troque os textos marcados com "TROQUE" pelo seu conteúdo.
+     IMPORTANTE: o LAYOUT é feito com CSS Grid e é o mesmo nos 3 temas.
+     Você escolhe a APARÊNCIA (fonte, cores, bordas), não o layout.
+     ============================================================ -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Pessoal — Breno Abreu Cavalcante</title>
+  <!-- Salve o tema escolhido como "estilo.css" (mesma pasta deste arquivo) -->
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <div class="pagina">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Currículo pessoal</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+    <!-- ====== CABEÇALHO ====== -->
+    <header class="cabecalho">
+      <h1>Breno Abreu Cavalcante</h1>
+      <p>Desenvolvedor de Sistemas · IFAL Campus Maceió</p>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Atividades</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
 
-        <body>
-
-            <h1>Olá! Meu nome é Breno</h1>
-
-            <h2 class="centro">Sou um desenvolvedor de sistemas</h2>
-
-            <img 
-            src="foto3x4.jpeg"
-            height="300"
-            />
-            <h2>
-                Sobre mim
-            </h2>
-
-            <p>
-                <h4>
-                    <div class="centralizar">
-                Me chamo Breno Abreu Cavalcante, nasci em 15/12/2010, tenho 15 anos e estou atualmente no 1º ano do ensino médio, cursando <a href = "https://www2.ifal.edu.br/campus/maceio/ensino/cursos/tecnicos-integrados/desenvolvimento-de-sistemas" target="_blank"> Desenvolvimento de Sistemas </a> no IFAL campus Maceió. Meu objetivo é me decicar para aprender e trabalhar na área.
-                    </div>
-                </h4>
-            </p>
-
-            <h2 class="separar">
-                Formação acadêmica
-            </h2>
-            <h4 class="s1">
-                Ensino médio técnico integrado em Desenvolvimento de Sistemas.
-                <ul>
-                    <li>Programação Web 1</li>
-                    <li>Introdução à Programação</li>
-                    <li>Fundamentos da Informática</li>
-                </ul>
-            </h4>
-            <h2 class="separar2">
-                Conhecimentos
-            </h2>
-
-            <h4 class="s2">
-            <ul>
-               <li>HTML (básico)</li>
-               <li>CSS (básico)</li>
-               <li>Java Script (básico)</li>
-               <li>Inglês (intermediário)</li>
-            </ul>
-            </h4>
-
-            <h4 class="separacao">
-                <span>Telefone</span> 
-                <span>E-mail</span>
-            </h4> 
-            
-            <p class="separacao2"> 
-                <span>(82) 99631-5391</span> <span>bac5@aluno.ifal.edu.br</span>
-            </p>
-        </body>
-
-        <nav>
-    <p>
-        <h2>Atividades</h2>
-    </p>
-    <p>
+    <!-- ====== CONTEÚDO PRINCIPAL ====== -->
+    <main class="principal">
+      <section id="sobre" class="cartao">
+        <h2>Sobre mim</h2>
+        <p>
+          Me chamo Breno Abreu Cavalcante, nasci em 15/12/2010, tenho 15 anos e estou atualmente no 1º ano do ensino médio, cursando 
+          <a href="https://www2.ifal.edu.br/campus/maceio/ensino/cursos/tecnicos-integrados/desenvolvimento-de-sistemas" target="_blank">Desenvolvimento de Sistemas</a> 
+          no IFAL campus Maceió. Meu objetivo é me dedicar para aprender e trabalhar na área.
+        </p>
+        
+        <h2 style="margin-top: 1.5rem;">Formação Acadêmica</h2>
+        <p>Ensino médio técnico integrado em Desenvolvimento de Sistemas, com disciplinas como:</p>
         <ul>
-        <li>
-        <a href="../cap04/index.html">Capítulo 4</a>
-        </li>
-    </p>
-    <p>
-        <li>
-        <a href="../cap05/index.html">Capítulo 5</a>
-        </li>
-    <p>
-        <li>
-        <a href="../atividade-css01-sala/index.html">Atividade 1 CSS</a>
-        </li>
-    </p>
-    <p>
-        <li>
-        <a href="../cap07/atv01.html">Atividade 2 CSS</a>
-        </li>
-    </p>
+          <li>Programação Web 1</li>
+          <li>Introdução à Programação</li>
+          <li>Fundamentos da Informática</li>
         </ul>
-    </p>
-    </nav>
+      </section>
 
+      <section id="projetos" class="cartao">
+        <h2>Atividades e Projetos</h2>
+        <div class="projetos">
+          <article class="projeto">
+            <h3>Capítulo 4</h3>
+            <p><a href="../cap04/index.html">Acessar atividade do Capítulo 4</a></p>
+          </article>
+
+          <article class="projeto">
+            <h3>Capítulo 5</h3>
+            <p><a href="../cap05/index.html">Acessar atividade do Capítulo 5</a></p>
+          </article>
+
+          <article class="projeto">
+            <h3>Atividade 1 CSS</h3>
+            <p><a href="../atividade-css01-sala/index.html">Acessar Atividade 1 CSS</a></p>
+          </article>
+
+          <article class="projeto">
+            <h3>Atividade 2 CSS</h3>
+            <p><a href="../cap07/atv01.html">Acessar Atividade 2 CSS</a></p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ====== BARRA LATERAL ====== -->
+    <aside class="lateral">
+      <section class="cartao">
+        <h2>Conhecimentos</h2>
+        <ul class="habilidades">
+          <li>HTML (básico)</li>
+          <li>CSS (básico)</li>
+          <li>JavaScript (básico)</li>
+          <li>Inglês (intermediário)</li>
+        </ul>
+      </section>
+
+      <section id="contato" class="cartao">
+        <h2>Contato</h2>
+        <ul class="contato">
+          <li>📞 (82) 99631-5391</li>
+          <li>✉️ <a href="mailto:bac5@aluno.ifal.edu.br">bac5@aluno.ifal.edu.br</a></li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- ====== RODAPÉ ====== -->
+    <footer class="rodape">© 2026 Breno Abreu Cavalcante · feito com HTML + CSS Grid</footer>
+  </div>
+</body>
 </html>
